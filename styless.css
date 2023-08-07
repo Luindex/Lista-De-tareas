@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'kanit', sans-serif;
+    line-height: 1.5;
+    background-color: #35155D;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+.container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #512B81;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.search{
+    margin-left:auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+form {
+    display: flex;
+}
+
+input{
+    padding: 15px 15px;
+    outline: none;
+    width: 400px;
+}
+.li-container{
+    background-color: transparent;
+    width: 100%;
+    color: white;
+    margin-top: 20px;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+    background-color: #7c45b1;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+}
+
+li p{
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+}
+
+.BorrarTarea{
+    margin-left: auto;
+    border: none;
+    background-color: #a90b0b;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 10%;
+    font-size:12px ;
+}
+
+.BorrarTarea:hover {
+    cursor: pointer;
+    background-color: rgb(107, 32, 173);
+}
+
+.Agregar{
+    padding: 5px 15px;
+    border: none;
+    color: white;
+    font-family: fantasy;
+    background-color:#8CABFF;
+    font-size: 12px;
+    outline: none;
+}
+.Agregar:hover{
+    cursor: pointer;
+    background-color: rgb(112, 231, 118);
+}
+.vacio{
+    color: rgb(107, 26, 184);
+}

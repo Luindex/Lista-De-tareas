@@ -19,7 +19,7 @@ agregar.addEventListener("click", (e) => {
     ul.appendChild(li)
 
     input.value = ""
-    empty.style.display = "none"
+    vacio.style.display = "none"
   }
 })
 
@@ -30,13 +30,13 @@ function bottonBorrar() {
   botonborrar.className = "BorrarTarea"
 
   botonborrar.addEventListener("click", (e) => {
-    const item = e.target.parantElement
+    const item = e.target.parentElement
     ul.removeChild(item)
 
-    const items = document.querySelector("li")
+    const items = document.querySelectorAll("li")
 
-    if (item.length === 0) {
-      empty.style.display = "block"
+    if (items.length === 0) {
+      vacio.style.display = "block"
     }
   })
   return botonborrar
