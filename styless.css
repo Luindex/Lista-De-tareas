@@ -39,6 +39,17 @@ input{
     padding: 15px 15px;
     outline: none;
     width: 400px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: transparent;
+    border-color: white;
+}
+input::placeholder{
+    color: rgb(255, 255, 255);
+    font-family: 'kanit', sans-serif;
+    font-weight:100;
+    
+    
 }
 .li-container{
     background-color: transparent;
@@ -49,7 +60,7 @@ input{
 ul{
     padding: 0;
 }
-li{
+.task{
     list-style: none;
     background-color: #7c45b1;
     border-radius: 10px;
@@ -57,7 +68,7 @@ li{
     display: flex;
 }
 
-li p{
+.task-text{
     margin: 0;
     padding: 15px;
     width: 100%;
@@ -70,9 +81,7 @@ li p{
     color: white;
     font-weight: bold;
     padding: 5px 10px;
-    outline: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    outline: none; 
     width: 10%;
     font-size:12px ;
 }
@@ -86,10 +95,13 @@ li p{
     padding: 5px 15px;
     border: none;
     color: white;
+    font-weight: bold;
     font-family: fantasy;
-    background-color:#8CABFF;
+    background-color:#924fa3;
     font-size: 12px;
     outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .Agregar:hover{
     cursor: pointer;
@@ -98,3 +110,33 @@ li p{
 .vacio{
     color: rgb(107, 26, 184);
 }
+.noTareas{
+    color:white
+}
+.BottonOk{
+    margin-left: auto;
+    border: none;
+    background-color: #97c445;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 10%;
+    font-size:12px ;
+}
+.BottonOk:hover{
+    cursor: pointer;
+    background-color: rgb(62, 160, 206);
+}
+
+
+
+.task__done  {
+    text-decoration:line-through;
+    background-color: #97c445;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+

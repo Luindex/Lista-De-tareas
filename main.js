@@ -13,10 +13,14 @@ agregar.addEventListener("click", (e) => {
     const li = document.createElement("li")
     const p = document.createElement("p")
     p.textContent = text // el parrafo va ser igual a l contenido del input
+    p.className = "task-text"
 
-    li.appendChild(p)
-    li.appendChild(bottonBorrar())
+    li.appendChild(p) //a li le agregamos un parrafo
+    li.appendChild(bottonBorrar()) //agremaos el boton de borrar
+    li.appendChild(buttonOk()) //agregamos el boton de Ok
     ul.appendChild(li)
+
+    li.className = "task"
 
     input.value = ""
     vacio.style.display = "none"
@@ -26,11 +30,14 @@ agregar.addEventListener("click", (e) => {
 function bottonBorrar() {
   const botonborrar = document.createElement("button")
 
-  botonborrar.textContent = "X"
-  botonborrar.className = "BorrarTarea"
+  botonborrar.textContent = "X" //creamos el contenido del boton
+  botonborrar.className = "BorrarTarea" //creamos la clase que se va utilizar en el css
 
-  botonborrar.addEventListener("click", (e) => {
-    const item = e.target.parentElement
+  botonborrar.addEventListener("click", (event) => {
+    const item = event.target.parentElement
+
+    console.log({ event })
+
     ul.removeChild(item)
 
     const items = document.querySelectorAll("li")
@@ -40,4 +47,25 @@ function bottonBorrar() {
     }
   })
   return botonborrar
+}
+
+// Returns a button that mark the TODO as completed
+function buttonOk() {
+  const button = document.createElement("button")
+  button.textContent = "!"
+  button.className = "BottonOk"
+
+  button.addEventListener("click", (event) => {
+    const parentElement = event.target.parentElement
+    const taskText = parentElement.querySelector(".task-text")
+    console.log({ event })
+
+    if (taskText.classList.contains("task__done")) {
+      taskText.classList.remove("task__done")
+    } else {
+      taskText.classList.add("task__done")
+    }
+  })
+
+  return button
 }
