@@ -68,7 +68,7 @@ ul{
     display: flex;
 }
 
-.task-text{
+.task .task-text{
     margin: 0;
     padding: 15px;
     width: 100%;
@@ -138,5 +138,7 @@ ul{
     background-color: #97c445;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    font-style: italic;
+    
 }
 
