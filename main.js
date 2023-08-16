@@ -1,5 +1,5 @@
 const input = document.querySelector("input")
-const agregar = document.querySelector(".Agregar")
+const agregar = document.querySelector(".search__Agregar")
 const ul = document.querySelector("ul")
 const vacio = document.querySelector(".vacio")
 
