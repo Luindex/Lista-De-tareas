@@ -131,8 +131,17 @@ ul{
     cursor: pointer;
     background-color: rgb(62, 160, 206);
 }
-
-
+.filter{
+    display: flex;
+    justify-content: space-around;
+}
+.filter__button{
+    border-radius: 10px;
+    padding: 13px 14px;
+    background: rgb(76 111 72);
+    color: white;
+    border-color: white;
+}
 
 .task__done  {
     text-decoration:line-through;
@@ -143,3 +152,42 @@ ul{
     
 }
 
+
+@-webkit-keyframes pulse {
+    50% {
+      background-color: rgba(32, 152, 209, 0.75);
+    }
+  }
+  @keyframes prueba {
+    50% {
+      background-color: rgba(32, 152, 209, 0.75);
+    }
+  }
+  .prueba {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+  }
+  .prueba:hover, .prueba:focus, .prueba:active {
+    -webkit-animation-name: prueba;
+    animation-name: prueba;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-color: #2098D1;
+    background-color: #2098d1;
+    color: white;
+  }
+  

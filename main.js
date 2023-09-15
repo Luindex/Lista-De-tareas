@@ -1,48 +1,68 @@
+"use strict" //para los errorres
 const input = document.querySelector("input")
 const agregar = document.querySelector(".search__Agregar")
-const ul = document.querySelector("ul")
 const vacio = document.querySelector(".vacio")
 
-agregar.addEventListener("click", (e) => {
-  e.preventDefault()
+let ListaDeTareas = []
 
-  const text = input.value // recibimos el contenido del input
+// let tarea = {
+//   content: "",
+// }
 
-  if (text !== "") {
-    // Si el texto es diferente de vacio
+function renderList(ListaDeTareas) {
+  const ul = document.querySelector("ul")
+  ul.innerHTML = ""
+
+  // vacio.style.display = "none"
+  ListaDeTareas.forEach((data, indice) => {
     const li = document.createElement("li")
-    const p = document.createElement("p")
-    p.textContent = text // el parrafo va ser igual a l contenido del input
-    p.className = "task-text"
+    li.classList.add("task")
 
-    li.appendChild(p) //a li le agregamos un parrafo
-    li.appendChild(bottonBorrar()) //agremaos el boton de borrar
-    li.appendChild(buttonOk()) //agregamos el boton de Ok
+    const p = document.createElement("p")
+    p.innerText = data.content
+    p.classList.add("task-text")
+
+    li.appendChild(p)
+    li.appendChild(bottonBorrar(indice))
+    li.appendChild(buttonOk())
     ul.appendChild(li)
 
-    li.className = "task"
+    console.log(data)
+  })
+}
 
-    input.value = ""
-    vacio.style.display = "none"
-  }
+renderList(ListaDeTareas)
+
+agregar.addEventListener("click", (event) => {
+  event.preventDefault()
+
+  let text = input.value
+
+  ListaDeTareas.push({ content: text })
+  vacio.style.display = "none"
+  console.log(ListaDeTareas)
+  renderList(ListaDeTareas)
+  input.value = ""
 })
 
-function bottonBorrar() {
+function bottonBorrar(indice) {
   const botonborrar = document.createElement("button")
 
   botonborrar.textContent = "X" //creamos el contenido del boton
   botonborrar.className = "BorrarTarea" //creamos la clase que se va utilizar en el css
 
   botonborrar.addEventListener("click", (event) => {
-    const item = event.target.parentElement
+    // const item = event.target.parentElement
 
-    console.log({ event })
+    // console.log({ event })
 
-    ul.removeChild(item)
+    // ul.removeChild(item)
+    ListaDeTareas.splice(indice, 1) //Borramos el indice del array
+    renderList(ListaDeTareas)
 
-    const items = document.querySelectorAll("li")
+    // const items = document.querySelectorAll("li")
 
-    if (items.length === 0) {
+    if (ListaDeTareas.length === 0) {
       vacio.style.display = "block"
     }
   })
@@ -69,3 +89,11 @@ function buttonOk() {
 
   return button
 }
+
+const btn = document.getElementById("filtro")
+btn.addEventListener("click", () => {
+  ListaDeTareas.sort((a, b) => {
+    return a.content.localeCompare(b.content)
+  })
+  renderList(ListaDeTareas)
+})
