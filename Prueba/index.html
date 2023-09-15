@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="./styless.css" />
+  </head>
+  <body>
+    <div class="container__menu">
+      <h1>Lista de Tareas</h1>
+      <div class="search__">
+        <form>
+          <input type="text" placeholder="Agregar Tarea" />
+          <button class="search__Agregar">+</button>
+        </form>
+      </div>
+      <div class="li-container">
+        <ul class="list__container"></ul>
+      </div>
+
+      <div class="vacio">
+        <p class="vacio__parrafo">No tienes Tareas pendientes</p>
+      </div>
+      <div class="filter">
+        <button class="filter__button" id="filtro">Filtrar A-Z</button>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
