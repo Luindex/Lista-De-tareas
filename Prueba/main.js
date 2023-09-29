@@ -2,6 +2,7 @@
 const input = document.querySelector("input")
 const agregar = document.querySelector(".search__Agregar")
 const vacio = document.querySelector(".vacio")
+const filter = document.querySelector(".filter__button")
 
 let ListaDeTareas = []
 
@@ -39,7 +40,9 @@ agregar.addEventListener("click", (event) => {
   let text = input.value
 
   ListaDeTareas.push({ content: text })
+
   vacio.style.display = "none"
+  filter.style.display = "block"
   console.log(ListaDeTareas)
   renderList(ListaDeTareas)
   input.value = ""
@@ -64,6 +67,7 @@ function bottonBorrar(indice) {
 
     if (ListaDeTareas.length === 0) {
       vacio.style.display = "block"
+      filter.style.display = "none"
     }
   })
   return botonborrar
@@ -95,5 +99,6 @@ btn.addEventListener("click", () => {
   ListaDeTareas.sort((a, b) => {
     return a.content.localeCompare(b.content)
   })
+
   renderList(ListaDeTareas)
 })

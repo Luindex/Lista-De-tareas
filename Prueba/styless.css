@@ -6,7 +6,7 @@ body{
     font-size: 16px;
     font-family: 'kanit', sans-serif;
     line-height: 1.5;
-    background-color: #35155D;
+    background-color:#000000;
     color: white;
 }
 
@@ -20,9 +20,10 @@ h1 {
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #512B81;
+    background-color: #52057B;
     padding: 30px;
     border-radius: 15px;
+    box-shadow: 10px 10px 10px rgb(36, 36, 36);
 }
 
 .search__{
@@ -36,11 +37,12 @@ h1 {
     color: white;
     font-weight: bold;
     font-family: fantasy;
-    background-color:#924fa3;
+    background-color:#892CDC;
     font-size: 12px;
     outline: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    cursor: pointer;
 }
 
 form {
@@ -55,6 +57,7 @@ input{
     border-bottom-left-radius: 10px;
     background-color: transparent;
     border-color: white;
+    color: white;
 }
 input::placeholder{
     color: rgb(255, 255, 255);
@@ -74,10 +77,11 @@ ul{
 }
 .task{
     list-style: none;
-    background-color: #7c45b1;
+    background-color: #BC6FF1;
     border-radius: 10px;
     margin-top: 15px;
     display: flex;
+    
 }
 
 .task .task-text{
@@ -89,7 +93,7 @@ ul{
 .BorrarTarea{
     margin-left: auto;
     border: none;
-    background-color: #a90b0b;
+    background-color: #933edd;
     color: white;
     font-weight: bold;
     padding: 5px 10px;
@@ -100,7 +104,7 @@ ul{
 
 .BorrarTarea:hover {
     cursor: pointer;
-    background-color: rgb(107, 32, 173);
+    background-color:#a90b0b;
 }
 
 
@@ -117,7 +121,7 @@ ul{
 .BottonOk{
     margin-left: auto;
     border: none;
-    background-color: #97c445;
+    background-color: #892CDC; 
     color: white;
     font-weight: bold;
     padding: 5px 10px;
@@ -129,7 +133,7 @@ ul{
 }
 .BottonOk:hover{
     cursor: pointer;
-    background-color: rgb(62, 160, 206);
+    background-color: #97c445;
 }
 .filter{
     display: flex;
@@ -138,14 +142,16 @@ ul{
 .filter__button{
     border-radius: 10px;
     padding: 13px 14px;
-    background: rgb(76 111 72);
+    background: #892CDC;
     color: white;
     border-color: white;
+    cursor: pointer;
+     display: none; 
 }
 
 .task__done  {
     text-decoration:line-through;
-    background-color: #97c445;
+    background-color: #892CDC;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     font-style: italic;
@@ -153,41 +159,5 @@ ul{
 }
 
 
-@-webkit-keyframes pulse {
-    50% {
-      background-color: rgba(32, 152, 209, 0.75);
-    }
-  }
-  @keyframes prueba {
-    50% {
-      background-color: rgba(32, 152, 209, 0.75);
-    }
-  }
-  .prueba {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    overflow: hidden;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-property: color, background-color;
-    transition-property: color, background-color;
-  }
-  .prueba:hover, .prueba:focus, .prueba:active {
-    -webkit-animation-name: prueba;
-    animation-name: prueba;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    background-color: #2098D1;
-    background-color: #2098d1;
-    color: white;
-  }
+
   
